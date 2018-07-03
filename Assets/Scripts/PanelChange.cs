@@ -13,21 +13,22 @@ public class PanelChange : MonoBehaviour {
     private int currentPanelCout = 0;
     private void Awake()
     {
-        mainAnimator=mainAnimator.GetComponent<Animator>();
+        mainAnimator=mainAnimator.GetComponent<Animator>();    //sjw : 没有理解。
     }
 	// Use this for initialization
 	void Start () {
         panels = new Transform[canvas.childCount];
-        currentPanel = new Transform[1024];
+        currentPanel = new Transform[1024];                 //sjw : 换个数据结构？数组存在空间浪费
         for (int i=0;i<canvas.childCount-1;i++)
         {
-            if (i != 0)
+            if (i != 0)                                     //sjw : 和工程组织形式耦合，是否可维护性太差
             {
                 panels[i] = canvas.GetChild(i);           
                 panels[i].transform.position = new Vector3(0, 0, 9000);
             }
             else 
             {
+                //panels[0] = curPanel[0] = cavas-main
                 panels[i] = canvas.GetChild(i);
                 currentPanel[0] = panels[i];
                 currentPanelCout++;
@@ -74,7 +75,7 @@ public class PanelChange : MonoBehaviour {
     {
         StartCoroutine(OpenPanel("Shop"));
     }
-    public void OpenFriends()
+    public void OpenFriends()                           //sjw: 未找到引用
     {
         StartCoroutine(LoadScence("Friends"));
     }

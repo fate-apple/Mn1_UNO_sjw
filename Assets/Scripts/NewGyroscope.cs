@@ -45,3 +45,5 @@ public class NewGyroscope : MonoBehaviour {
              Quaternion.Euler(m_TagerTransofm+m_InitialYAxisTransofm), sensitivity * Time.deltaTime);
     }
 }
+
+//sjw :rotationAxialState未有用户修改途径
