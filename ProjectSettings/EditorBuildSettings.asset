@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scence/Main.unity
     guid: a3dbf1e06ea0a2d40af3f44a5025bfc2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Friends/Scences/Friends.unity
     guid: 3a0e75673ee0ee742ab105ed5be68bf0
+  - enabled: 1
+    path: Assets/Scence/Pre2.unity
+    guid: 4697967bac1901043b6964cefbfffe43
   m_configObjects: {}
